@@ -1,0 +1,18 @@
+<div class="container bg-gray-100 flex justify-center items-center px-20 py-20 m-3">
+  <div class="space-y-10">
+    <h1 class="text-center mt-10 text-4xl font-bold">Select your game</h1>
+
+
+    <div class="flex items-center p-6 space-x-6 bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-500">
+        <div class="w-48 h-48">
+          <img src="<%= Routes.static_path(@conn, "/images/chess_illustration.jpg") %>"/>
+        </div>
+
+        <%= link  to: Routes.play_chess_path(@conn, :show),
+          class:  "bg-red-600 py-5 px-7 text-white font-semibold rounded-lg hover:shadow-lg transition duration-3000 cursor-pointer hover:text-white chess_link" do %>
+            <span>Search a chess game</span>
+        <%end %>
+
+    </div>
+  </div>
+</div>

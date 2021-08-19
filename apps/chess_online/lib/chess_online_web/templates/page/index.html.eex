@@ -1,0 +1,5 @@
+<section class="phx-hero">
+  <h1><%= gettext "Welcome to %{name}!", name: "ChessOnline" %></h1>
+  <p>Please Log in to search for a game</p>
+
+</section>

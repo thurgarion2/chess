@@ -1,0 +1,107 @@
+/* This file is for your main application css. */
+@import "./phoenix.css";
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer base {
+  a {
+    @apply text-blue-500 hover:text-blue-600;
+  }
+
+  h1 {
+    @apply text-6xl font-normal;
+  }
+
+  button {
+    @apply bg-blue-500 border-blue-500 font-normal text-white text-center align-middle  px-4 my-4 ;
+  }
+}
+
+@layer utilities {
+  .form-group {
+    @apply container my-8;
+  }
+
+  .form-control{
+    @apply container my-4 border-blue-500 focus:ring-blue-400 focus:ring-2 focus:ring-opacity-50;
+  }
+
+  .btn-primary{
+    @apply text-blue-500 border-blue-500 bg-white hover:bg-blue-500 hover:text-white p-4 my-4 text-center;
+  }
+
+  .black_tile{
+    @apply w-28 h-28 border-0 bg-tile-black m-0 p-1 hover:bg-tile-hover-black;
+  }
+
+  .white_tile{
+    @apply w-28 h-28 border-0 bg-tile-white m-0 p-1 hover:bg-tile-hover-white;
+  }
+
+  .selected{
+    @apply w-28 h-28 border-0 bg-selected-green m-0 p-1 hover:bg-tile-hover-white;
+  }
+
+  .board{
+    @apply border-black w-auto h-auto border-2 p-0 my-2 mx-auto;
+  }
+
+  .board_line{
+    @apply border-0 p-0 m-0;
+  }
+
+  .waiting{
+    @apply inline-flex items-center mx-auto my-64 px-4 py-2 bg-pink-600 border border-transparent text-base leading-6 font-medium rounded-md text-white;
+  }
+
+  .waiting_spinner{
+    @apply animate-spin h-16 w-16 mr-3;
+  }
+
+  .waiting_text{
+    @apply text-3xl font-black;
+  }
+}
+
+.chess_link:visited{
+  color: white;
+}
+
+
+/* Alerts and form errors */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+.alert-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+.alert p {
+  margin-bottom: 0;
+}
+.alert:empty {
+  display: none;
+}
+.invalid-feedback {
+  color: #a94442;
+  display: block;
+  margin: -1rem 0 2rem;
+}
